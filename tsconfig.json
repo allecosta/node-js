@@ -4,10 +4,12 @@
     // File Layout
     // "rootDir": "./src",
     // "outDir": "./dist",
+    "esModuleInterop": true,  
+    "allowSyntheticDefaultImports": true,
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "esnext",
+    "module": "commonjs",
     "target": "es2020",
     "types": [],
     // For nodejs:

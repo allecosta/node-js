@@ -1,0 +1,12 @@
+ const mongoose = require('mongoose');
+ /*const schema = mongoose.Schema;*/
+
+ const postSchema = new mongoose.Schema({
+    title: String,
+    content: String,
+    author: String
+ });
+
+ const Post = mongoose.model('Post', postSchema);
+
+ module.exports = Post;

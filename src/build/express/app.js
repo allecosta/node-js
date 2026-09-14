@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
-const port = 8081;
+
+// Setting environment variables
+require('dotenv').config();
+
 
 app.get('/', (req, res) => {
     res.send("Home Page");
@@ -46,14 +49,7 @@ app.get('/presentation', (req, res) => {
     `);
 });
 
-/*app.post('/user', (req, res) => {
-    res.send("POST ...")
-});*/
-
-
-/*app.all('*', (req, res) => {
-    res.status(404).send("404 - Not Found")
-});*/
+const port = process.env.PORT || 8081;
 
 app.listen(port, () => {
     console.log(`Listening at http://localhost:${port}`);

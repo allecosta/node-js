@@ -6,7 +6,7 @@ require('dotenv').config();
 
 
 app.get('/', (req, res) => {
-    res.send("Home Page");
+    res.send("Index Page");
 });
 
 app.get('/services', (req, res) => {
@@ -17,7 +17,7 @@ app.get('/founder', (req, res) => {
     res.send("Founder Page");
 });
 
-app.get('/presentation', (req, res) => {
+app.get('/home', (req, res) => {
     res.send(`
         <html>
             <head>

@@ -10,7 +10,7 @@ con.connect((error) => {
 
         console.log(result);
         console.log(fields);  
-        //console.log(fields[0].name);
+        console.log(result[3].name);
     });
 
     con.end();

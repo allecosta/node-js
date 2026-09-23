@@ -4,9 +4,13 @@ con.connect((error) => {
     if (error)
         throw error;
 
-    let sql = "INSERT INTO customers (name, address, city, postalcode, country) VALUES ('Luke', 'b street', 'jaws', 34500, 'Universe')";
+    let sql = "INSERT INTO customers (name, address, city, postalcode, country) VALUES (?, ?, ?, ?, ?)";
 
-    con.query(sql, (error, result) => {
+    let values = [
+        'Luke', 'b street', 'jaws', 34500, 'Universe'
+    ];
+
+    con.query(sql, values, (error, result) => {
         if (error)
             throw error;
 
